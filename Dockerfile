@@ -81,7 +81,7 @@ ENV LANG en_US.UTF-8
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
 # internal dependency
-RUN apt-get install -y ros-noenic-sophus
+RUN apt-get install -y ros-noetic-sophus tmux
 
 USER $USERNAME
 # terminal colors with xterm
