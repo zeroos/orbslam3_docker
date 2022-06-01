@@ -80,9 +80,12 @@ ENV LANG en_US.UTF-8
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
 
+# internal dependency
+RUN apt-get install -y ros-noenic-sophus
+
 USER $USERNAME
 # terminal colors with xterm
 ENV TERM xterm
-RUN mkdir /ORB_SLAM3
-WORKDIR /ORB_SLAM3
+RUN mkdir /workspace
+WORKDIR /workspace
 CMD ["bash"]
